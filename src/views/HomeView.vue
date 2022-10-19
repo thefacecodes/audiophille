@@ -1,50 +1,19 @@
 <template>
   <div class="home">
-    <div class="banner">
-      <picture>
-        <source media="(max-width: 480px)" srcset="../assets/home/mobile/image-header.jpg">
-        <source media="(max-width: 960px)" srcset="../assets/home/tablet/image-header.jpg">
-        <img src="../assets/home/desktop/image-hero.jpg" alt="">
-      </picture>
-      <div class="hero">
-        <div>
-           <span class="new">New product</span>
-        <h1>XX99 Mark II Headphones</h1>
-        <p> Experience natural, lifelike audio and exceptional build quality made for
-      the passionate music enthusiast.</p>
-      <router-link to="/product">See product</router-link> 
-        </div>
-       
-      </div>
-    </div>
+    <BannerSection />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
-
+import BannerSection from "../components/Banner.vue";
 export default {
-  name: 'HomeView',
-  components: {
-  
-  }
-}
+  name: "HomeView",
+  components: { BannerSection },
+};
 </script>
 
 <style scoped>
-.banner {
-  /* background: url("../assets/home/desktop/image-hero.jpg"); */
-  /* height: 100vh; */
-  /* background-size: co; */
-  /* background-position: top; */
-  position: relative;
-}
-
-.banner img {
-  width: 100%;
-}
-
 .hero {
   position: absolute;
   top: 0;
@@ -52,18 +21,18 @@ export default {
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
- left: 15em;
- width: 40%;
- bottom: 0;
- /* background: black; */
+  left: 15em;
+  width: 40%;
+  bottom: 0;
+  /* background: black; */
 }
 
-.hero  h1 {
-   color: white;
-   font-size: 5em;
-   text-transform: uppercase;
-   letter-spacing: 0.1em;
-   margin-block: 0.3em;
+.hero h1 {
+  color: white;
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-block: 0.3em;
 }
 
 .new {
